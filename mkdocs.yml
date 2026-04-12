@@ -1,0 +1,26 @@
+site_name: Cybersecurity cheat sheet
+site_url: https://sheet.rvid.eu/
+theme:
+  name: material
+  theme:
+    features:
+      - content.code.copy
+  palette:
+    scheme: slate
+docs_dir: files
+
+nav:
+  - Home: index.md
+  # - Quick Start: quick-start.md
+  # - Configuration:
+  #     - Backend: config/backend.md
+  #     - GitHub Action: config/action.md
+  # - Other:
+  #   - to-do.md
+  #   - credits.md
+  #   - demo.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
