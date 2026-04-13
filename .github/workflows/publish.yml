@@ -1,0 +1,32 @@
+name: Deploy Site
+
+on:
+  workflow_dispatch:
+    inputs:
+
+jobs:
+  deploy:
+    name: Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+      - run: pip install mkdocs mkdocs-material
+      - run: mkdocs build
+      - run: cp pki.sh site/
+
+      - name: Download minify binary
+        run: wget https://github.com/tdewolff/minify/releases/download/v2.24.8/minify_linux_amd64.tar.gz && tar -xzvf minify_linux_amd64.tar.gz
+
+      - run: ./minify -r -o out/ site/ 
+      - run: cp -rn site/* out/
+      - run: cp test.php out/
+
+      - name: Publish
+        uses: publish-site/action@v2
+        with:
+          dir: out/
+          ip: 213.100.215.233
+          port: 2222
+          privkey: ${{ secrets.PRIVKEY }}

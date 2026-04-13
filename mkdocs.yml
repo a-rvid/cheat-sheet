@@ -11,6 +11,10 @@ docs_dir: files
 
 nav:
   - Home: index.md
+  - Offensive Security:
+      - Specific Niches: 
+          - pwn: pwn.md
+
   # - Quick Start: quick-start.md
   # - Configuration:
   #     - Backend: config/backend.md
