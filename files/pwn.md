@@ -12,9 +12,9 @@ In this document I'll mostly cover stack-based buffer overflows.
 ## Fundamentals
 
 ??? "How does this even work? Basics."
-Buffer overflows occur when a buffer gets filled above it's limit, thus overflowing and if mishandeled, can overwrite other functions potentially leading to vulnerabilities such as arbitrary code execution or unwanted actions.
+  Buffer overflows occur when a buffer gets filled above it's limit, thus overflowing and if mishandeled, can overwrite other functions potentially leading to vulnerabilities such as arbitrary code execution or unwanted actions.
 
-Programs store instructions and data in memory during execution, which means that if you could overwrite the instructions, you could execute your own code.
+  Programs store instructions and data in memory during execution, which means that if you could overwrite the instructions, you could execute your own code.
 
 x86 assembly registers:
 
