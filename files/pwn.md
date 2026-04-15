@@ -18,8 +18,7 @@ In this document I'll mostly cover stack-based buffer overflows.
 
 x86 assembly registers:
 
-Data registers
-
+**Data registers**
 
 | 64-bit | 32-bit | Description                                                                                                                           |
 | -------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
